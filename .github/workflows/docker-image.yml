@@ -11,8 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install Docker
-        run: sudo apt-get update && sudo apt-get install -y docker-ce
       - name: Build Docker image
         run: docker build -t my-react-app .
       - name: Push Docker image to Docker Hub
